@@ -1,0 +1,7 @@
+{
+  "wallCellColor": "#FF6F00",
+  "pathColor": "#00AA00",
+  "drawGrid": false,
+  "gridColor": "#2D2D2D",
+  "animationDelayMs": 80
+}
