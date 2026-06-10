@@ -1,5 +1,6 @@
 package main;
 
+import com.formdev.flatlaf.FlatDarkLaf;
 import org.json.JSONObject;
 
 import javax.swing.*;
@@ -13,12 +14,23 @@ public class Main {
     public static final int normalSizeText = 20;
     public static Font font = new Font("Tahoma", Font.BOLD, normalSizeText);
 
-    private static JFrame window = new JFrame("יצירת מבוך");
+    private static JFrame window;
     private static CardLayout cardLayout;
     private static MenuPanel menuPanel;
     private static MazePanel mazePanel;
 
     public static void main(String[] args) {
+        JFrame.setDefaultLookAndFeelDecorated(true);
+        UIManager.put("TitlePane.background", new Color(30, 30 ,30));
+        UIManager.put("TitlePane.unifiedBackground", new Color(30, 30, 30));
+        UIManager.put("TitlePane.foreground", MAIN_COLOR);
+        UIManager.put("TitlePane.font", font.deriveFont(12f));
+        UIManager.put("Component.arc", 15);
+        UIManager.put("Button.arc", 15);
+        FlatDarkLaf.setup();
+
+        window = new JFrame("יצירת מבוך");
+
         cardLayout = new CardLayout();
 
         window.setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
