@@ -23,6 +23,7 @@ public class Main {
         JFrame.setDefaultLookAndFeelDecorated(true);
         UIManager.put("TitlePane.background", new Color(30, 30 ,30));
         UIManager.put("TitlePane.unifiedBackground", new Color(30, 30, 30));
+        UIManager.put("TitlePane.inactiveBackground", new Color(30, 30, 30));
         UIManager.put("TitlePane.foreground", MAIN_COLOR);
         UIManager.put("TitlePane.font", font.deriveFont(12f));
         UIManager.put("Component.arc", 15);
@@ -44,9 +45,12 @@ public class Main {
     }
 
     public static void showMenuPanel() {
-        if(menuPanel != null){
+        if(menuPanel != null)
             window.getContentPane().remove(menuPanel);
-        }
+
+        if(mazePanel != null)
+            window.getContentPane().remove(mazePanel);
+
         menuPanel = new MenuPanel();
 
         window.getContentPane().add(menuPanel, "MenuPanel");

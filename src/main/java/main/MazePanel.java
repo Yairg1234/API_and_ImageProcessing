@@ -61,6 +61,11 @@ public class MazePanel extends JPanel {
         });
         footerPanel.add(btnCheckSolution, BorderLayout.CENTER);
 
+        JButton btnBack = new JButton("חזור");
+        btnBack.setFont(font.deriveFont(12f));
+        btnBack.addActionListener(e -> Main.showMenuPanel());
+        footerPanel.add(btnBack);
+
         this.add(headerPanel, BorderLayout.NORTH);
         this.add(mazeCard, BorderLayout.CENTER);
         this.add(footerPanel, BorderLayout.SOUTH);
