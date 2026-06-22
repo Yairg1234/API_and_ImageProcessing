@@ -22,7 +22,7 @@ public class PrintMaze extends JPanel {
     private final int animationDelayMs;
     private final int width;
     private final int height;
-    private final int cellSize = 20; //16
+    private final int cellSize = 16; //16
     private int cols;
     private int rows;
     private boolean[][] isWall;
